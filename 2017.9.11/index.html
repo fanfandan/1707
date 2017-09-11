@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <script>
+	 /*闭包*/
+	 	 function fn(){
+	 		var num =10;
+	 		return fn1;
+	 		function fn1(){
+	 			num++;
+	 			return num;
+	 	 	}
+	 	 }
+	 	 var result =fn()  //fn1//
+	 	 alert(result());  //11//
+
+
+
+	 	/*箭头函数,一般往回调函数用 没有arguments*/
+	 	 var fn=function(a){
+	 		return a;
+	    	};
+	 	 var fn = a=>a;
+       
+         
+      var fn=(a,b)=>{  //参数多了，需要加一个小括号//
+      	return(a+b)
+      }
+      alert(fn(3,5))
+
+       var fn=c=>c;
+       alert(fn(100));
+
+
+        /*没有参数，加一个小括号*/
+	 	/*var fn = ()=>a;
+	 	var fn=function(){
+	 		return a;
+	 	} 
+	 	alert(fn(1));*/
+	 	
+	 	
+	 	/*var num =10;
+	 	function fn(){
+	 		console.log(num); //undefined 局部提升 覆盖全局//
+	 		if(true){
+	 			var num='a';
+	 		}
+	 	}
+	 	fn();*/
+
+        /*块级作用域 let识别 var不识别*/
+	 	{
+          let num='2';
+          console.log(num);
+	 	}
+
+        const pi=31.4; /*常量定义*/
+	    alert(pi);
+        
+
+        /*内置顶层函数实例*/
+	 	let str ='冯芳'
+	 	console.log(escape(str))  //编码//
+	 	console.log(unescape('%u51AF%u82B3'))  //解码//
+	 	console.log(Number(0b11111))
+	 	console.log(Number(true)) //1 //
+        console.log(Number(undefined))  //NaN //
+        console.log(Number('123'))  //123
+        console.log(Number('00123'))  //123
+        console.log(Number('123.00'))  //123 去掉无意义的
+        console.log(Number('abc'))  //NaN //
+        console.log(Number('100px'))  //NaN //
+        String(true) //'true'//
+        console.log(Boolean('')) //flase
+        console.log(parseInt('123'))//字符串转为整数  123//
+        console.log(parseInt('123px'))//字符串转为整数  123//
+        console.log(parseInt('123px200'))//字符串转为整数  123//
+        console.log(parseInt('abc123px200'))//字符串转为整数  NAN//
+        console.log(parseFloat('123'))//字符串转为整数  123//
+        console.log(parseFloat('123.5px'))//字符串转为整数  123.5//
+        isNaN(false)  //false能转数字 false//
+
+
+          //内置 自带 顶层 全局 函数 //
+         escape() unescape() Number() String() Boolean() 	
+         parseInt()   parseFloat() 
+         数字 +、- 空格 第一个数字字符开始，第一个非数字字符结束
+         isNaN() is not a number
+
+
+	     for(let i=0;i<10;i++){
+	 		console.log(i);
+	    }
+	 	 console.log(i) /*报错 i 在块级中*/ 
+
+
+      
+	 </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+   <form action=""></form>
+	<script>
+		 var str=`你 是`;
+		 alert(str);
+		 var str1='这是\n一个字符串'
+		 alert(str1);
+		  var num1=43;
+         var num2=40;
+		 var info=`我们班有两个班组成,第一个班505总共有${num1}人，第二个班507有$
+		 {num2}，一共有${num1+num2}`;
+		 alert(info);
+		
+		 a+=1;
+		 a=a+1;
+
+		 var y='a' ,z='b';
+		 alert(y<z);
+
+		 var m='10' ,n='2';
+		 alert(m<n);
+         
+
+		 var m='10' ,k=2;
+		 alert(m<k);
+		 数字和字符串相比，字符串尝试转成数字
+
+		var m='10' ,g='2px';
+		alert(m<k);
+		alert(m>k);  /*返回都为false*/
+
+
+		 alert(undefined==null); true;
+
+	 alert(!10);
+          var num=11;
+          var flag;
+		 flag = num%2==0 ? true :false;
+		 三元表达式
+
+		// new 创建一个对象
+		// delete 删除一个对象的属性或者方法
+		// - 10 负号;
+		// ()调用函数/改变运算的优先级
+		// ,一次声明多个变量
+		// var zhangsan ,li , si ,hu;
+		// 
+		// 单路分支
+		 // var n1=prompt('请输入')
+		 // if(n1>20){
+		 // 	alert(true);
+		 // }
+
+		// 双路分支
+		  var n2=10, n3=20;
+		  if(n1>5&& n2<50){
+		  	alert(true);
+		  }
+		  else{
+		  	alert(false);
+		  }
+
+		// 优秀	 90~100
+		// 良好     80~90
+		// 中       70~80
+		// 及格     60~70
+  //       不及格   60
+         
+		 var score = prompt('请输入你的成绩',60);
+		 if( score<=100 && score>=90){
+		 	alert('优秀');
+		 }
+		 else if (score<90 && score>=80) {
+		 	alert('良好');
+		 }
+		 else if (score>=70 && score<80 ) {
+		 	alert('中');
+		 }
+		 else if (score>=60 && score<70 ) {
+		 	alert('及格');
+		 }
+		 else if (score>=0 && score<60 ) {
+		 	alert('不及格');
+		 }
+		 else{
+		 	alert('请输入正确的值');
+		 }
+
+	 var week=prompt('请输入',1)
+	 switch(week){
+         case  '1':
+          alert('一组');
+          break;
+          case  '2':
+          alert('二组');
+          break;
+
+          case  '3':
+          alert('三组');
+          break;
+
+          case  '4':
+          alert('四组');
+          break;
+
+           case  '5':
+           alert('五组');
+           break;
+
+           default:
+           alert('请输入正确的值');
+		 }
+		
+  /*任意范围内自然数
+  基数/偶数的求和*/
+         
+       var min1=1*prompt('请输入最小值')
+       var max1=1*prompt('请输入最大值')
+       var sum=0,i;
+ for(i=min1;i<=max1;i++)
+ 	sum=sum+i;	
+ alert(sum);
+
+
+/*
+        var min1=1*prompt('请输入最小值')
+        var max1=1*prompt('请输入最大值')
+        var sum=0;
+		for(var i=min1;i<=max1;i++){
+			if(i%2==0){
+			sum=sum+i;		
+		  }
+		}
+		   alert(`偶数值的和为${sum}`);
+
+         for(var i=min1;i<=max1;i++){
+		   if (i%2==1){
+		   	sum=sum+i;
+		   	
+		    }
+         }
+           alert(`基数值的和为${sum}`);
+         var sum=0;
+		 for(var i=1;i<=10;i++){
+
+		 	if (i%2==0){
+		 	sum=sum+i;	
+		    }
+		 }
+		 alert(sum);
+		 
+   for(var j=1;j<4;j++){
+    for(var i=1;i<11;i++){
+    	document.write('*');
+    }
+    document.write('<br/>')
+ }
+*/
+
+document.write('<table>')
+		   for(i=1;1<=5;i++){
+		   	document.write('<tr>');
+		   	for(j=1;j<=i;j++){
+		   		document.write('<td>'+i+'</td>')
+		   	}
+		   	document.write('</tr>');
+		   }
+		 document.write('</table>')
+	</script>
+</body>
+</html>

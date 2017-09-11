@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数</title>
+</head>
+<body>
+	<script>
+
+		/*给数组插入任意元素*/
+		/*function push(arr,...value){
+          for(i=0;i<value.length;i++){
+          	arr[arr.length]=value[i];
+          }
+           console.log(arr);
+		}
+		var arr=[1,2,3,4,5,6,7,8,9];
+		push(arr,'a',11);
+
+
+        function push1(arr){
+		for(i=1;i<arguments.length;i++){
+           arr[arr.length]=arguments[i];
+           }
+       }
+       var arr=[1,2,3,4,5,6,7,8,9];
+		push(arr,'a',11);*/
+
+
+		/*给数组进行升序*/
+	 /*var arr1=[1,2,3,4,5,6,7,8,9];
+		function sortUp(){
+	 	for(i=0;i<arr.length;i++){
+	 		for (j=i+1;j<arr.length.j++){
+	 			if (arr[i]>arr[j]) {
+
+	 			}
+	 		}
+	 	}
+	 }*/
+		
+        /*数组存在某个特定的值 return*/
+       /* var arr=[1];
+        var result= exsit(arr,9);
+        alert(result);
+          function exsit(arr,value){*/
+         	/*是否数组*/
+        /*if(!( typeof arr == 'object' &&  arguments.length>2 ) ){
+         	return '输入错误';
+          }
+          	for( var i=0;i<arr.length;i++){
+          		if(arr[i]==value){
+                    return true;
+          		}
+          	}
+          	return false;
+        }*/
+
+
+
+       /*数组转换字符串*/
+    /*function change(arr,str){
+       	var result= '';
+       	 for(var i=0;i<arr.length;i++){
+       	 	if(i<arr.length-1){
+       	 	result += arr[i]+ str;
+       	   }
+       	 	else{
+             result += arr[i];
+           }
+       	 }
+       	 return result;
+       }
+      var arr=[1,2,3,4,5];
+      var result1= change(arr,'-');
+       console.log(result1);*/
+       //    变量' '
+       //    1.遍历
+       //    最后一个
+       //    +=
+      /*function change1(arr2,str){
+      	str =str ==undefined ? '-' : str ;
+       	var result='';
+       	for( var i=0;i<arr2.length;i++){
+       		if(i<arr2.length-1){
+       		result=result+arr2[i]+str;
+       	   }
+       	   else{
+       	   	result=result+arr2[i];
+       	   }
+       	}
+       	return result;
+       }
+       var arr3=[9,8,7,4,5,6,1,2,3,2];
+       var result=change1(arr3,'+');
+       alert(result);*/
+
+
+   /*筛选*/
+    /*function f1(arr2){
+    	var b=[];
+    	for( var i=0;i<arr2.length;i++){
+    		if( arr2[i] %2 == 0 ) {
+               b[b.length]=arr2[i];
+    		}
+    	}
+    	return b;
+       }
+    var arr2=[1,2,3,4,5,6,7,8,9,12,14];
+    var result=f1(arr2);
+    alert(result);*/
+   
+
+
+   /*作用域*/
+   function aa(num1,num2){
+     return num1*num2;
+   }
+   aa(1,2);
+   var result=aa(1,2);
+   console.log(result);
+
+   function bb(num1,num2){
+     return num1*3+num2;
+   }
+   bb(1,2);
+   var result=bb(1,2);
+   console.log(result);
+
+   function cc(num1,num2){
+     return num1+num2;
+   }
+   cc(1,2);
+   var result=cc(1,2);
+   console.log(result);
+
+   function math(num1,num2,fn){
+   	  return fn(num1,num2);
+
+   }
+   math(1,2,aa);
+   var result=math(1,2,aa);
+   console.log(result);
+
+
+
+   /*映射，把函数作为参数*/
+map(arr,function(value){
+  return value*2;
+})
+function map(arr,fn){
+  var b=[];
+  for(i=0;i<arr.length;i++){
+    if(fn(arr[i])){
+   b[b.length]=fn(arr[i]);
+  }
+}
+}
+
+
+function dayu(arr,fn){
+    var newarr=[];
+    for(i=0;i<arr.length;i++){
+      if(fn(arr[i])){
+        newarr[newarr.length]=arr[i];
+      }
+    }
+    return newarr;
+}
+
+ var farr=map(arr,function(value){
+   	return value>0;
+   })
+
+/*回调函数*/
+ function map(arr,fn){
+   	 var b=[];
+	   for(i=0;i<arr.length;i++){
+	 if( fn(arr[i])){
+	 	 b[b.length]=arr[i];
+	 }
+	   }
+	   return b;
+   }
+     </script>
+</body>
+</html>
