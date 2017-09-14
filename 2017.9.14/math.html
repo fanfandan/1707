@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Math</title>
+</head>
+<body>
+<style >
+	
+</style>
+<div class="box"></div>
+	<script>
+  let a=[1,2,3,4,5]
+  let b=[];
+  /*for(i=0;i<3;i++){
+   b[b.length]=a[Math.floor(Math.random()*a.length)];  
+  }
+  console.log(b)*/
+
+   
+  /*for(let i=0;i<3;i++){
+  	let j=Math.floor(Math.random()*a.length); 
+  	if(!b.includes(a[j])){
+  		b[b.length]=a[j]
+  	}
+  	    
+}*/
+
+for(let i=0;i<3;i++){
+	let j=Math.floor(Math.random()*a.length);
+	if(b.includes(a[j])){
+		i--;	//如果没有取到合适的值，重置i的值//
+   }
+ else{
+ 	b[b.length]=a[j]
+   }
+ }
+console.log(b)
+		// console.log(Math.abs(-10)) //绝对值
+		// console.log(Math.round(-10.5)) //大概值-10
+		// console.log(Math.ceil(5.3)) //向上取整6
+		// console.log(Math.ceil(-5.3)) //向上取整-5
+		// console.log(Math.floor(-5.3)) //向下取整-6
+		// console.log(Math.randown(-5.3)) //向下取整-6
+		//console.log(Math.pow(2,3)) //X的Y次方
+		// console.log(Math.sqrt(2) )//开方//
+        
+       /* function color(){
+        let str='rgb('
+        for(let i=0;i<3;i++){
+       let num= Math.round(Math.randown()*255);
+       str+=num+',';
+   }
+       str=str.slice(0,-1);
+       str+=')'
+       return str
+}*
+        /*let box =document.getElementById('box');
+        box.onmouseover=function(){
+        	box.style.background=color();*/
+         
+	</script>
+        
+</body>
+</html>

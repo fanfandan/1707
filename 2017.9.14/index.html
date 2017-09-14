@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <script>
+    	let a=[1,2,3,4,5];
+    	let a1=new Array(2,3,4,5)//面向对象声明一个数组//
+    	let a1=new Array(5) //只有一个参数，而且为数字的时候，数字代表长度//
+    	let a2=Array.of(5,3);//构造函数的一个方法，传元素//
+	    a.length=2;
+	    
+	    a.push('a','b');
+	    console.log(a)
+	    let result=a.unshift('a','b') //返回数组长度//
+	    let re=a.pop()  //后面删除，返回被删除的元素//
+	    let res=a.shift()//前面删除，返回被删掉的元素
+	    
+	    a.splice(1,2); //1,4,5//
+	    console.log(re)
+	    console.log(res)
+	    console.log(a)
+	    console.log(result)
+	    
+	    
+	    let a1=['a','b','c'];
+ 
+     //  let sum=0;
+     //  a3.forEach(value,index,obj){//元素，位置，所在数组，没有返回值，遍历，循环的//
+ 	   // // sum+=value;
+ 	   // console.log(1)
+     //   } 
+     // let map=arr.map((value,index)=>value+index)
+
+     // let a3=[1,2,3,4,5,6,7,8,9] //数组中每个元素，都会执行回调函数，回调函数值为true，返回到新的数组//
+   // let result=a3.filter(function(value,indx,obj){
+   	 // return value%2==0
+   // })
+   // console.log(result);
+	     /*let a2=[1,102,5,8,905]
+	     a2.sort()             //排序，按照ASCII码进行排序对原来数组有影响//
+	     console.log(a2)*/
+
+	     a2.sort(function(a,b)) {
+	     	 return a-b<0  //降序//  some everyboolean  数组 map映射 filter forEach一样
+
+	     	 return a-b>0  //升序//
+	     }
+
+	    a1.reverse(a1)//反转，对原来数组有影响//
+	    console.log(a1)
+	     
+	     
+	    let result=a1.join('-');//数组->字符串，默认,进行连接，对原来数组没有影响//
+	    console.log(result);
+
+	    for(let i=0;i<a1.length;i++){
+	    	a.push(a1[i])
+	    }
+
+	    let result=a.concat(a1) //连接，对原来数组没有影响//
+	     console.log(result)
+	    
+
+	     a.push(...a1);//将a1的值传到a数组中//
+	    let fn=(value)=>value  //没有argumentS，不能作为构造函数实例化对象,没有this//
+	     let fn =(num) =>({name:'zahng',age:18}) //括号 返回json对象//
+	     let  fn(num)=>{return {name:'zahng',age:18}}
+	    
+	    //去重复,判定-传值//
+	    //[1,2,3,4,5] [4,5,1,2,3]
+	    let arr=[1,2,3,4,5,1,2,3]
+	    let newarr=[]; 
+
+	    function chongfu(){
+	   for(let i=0;i<arr.length;i++ ){
+	    	if(newarr.includes(arr[i])){ //includes返回值//
+	    	    break
+	    	}
+	    	else{
+	    		newarr[newarr.length++]=arr[i]
+	    	}	    	
+	    }
+	    return newarr
+	}
+	    console.log(chongfu());
+      
+      
+
+	    function chongfu2(){
+	    	let b=[] 	
+           for(let i=0;i<arr.length;i++){
+          	let flag=true
+          	for(let j=i+1;j<arr.length;j++){
+             	if(arr[j]==arr[i]){
+             		flag=false
+                    break
+             	} 	
+            }
+            if(flag)
+          	 b.push(arr[i])
+          }
+          return b
+	    }
+	     console.log(chongfu2());
+    </script>
+	
+</body>
+</html>
