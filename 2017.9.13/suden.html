@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function Student(){
+        this.name='zheng';
+        this.class='一年级';
+	}
+	function Person(){
+
+	}
+	let zhangsan=new Student;
+	let wang= new Student;
+	delete wang.class;
+	console.log(wang.class);
+
+	/*let yue=new Person;
+	console.log(zhangsan instanceof Student);
+	console.log(yue instanceof Person);	*/
+	//验证对象，是否从某个构造函数中实例出来//
+	</script>
+</body>
+</html>

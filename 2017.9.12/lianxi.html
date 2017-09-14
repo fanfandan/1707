@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+  <script >
+		/*1.构造函数*/
+		/*function iphone(name,size,price,color){
+           this.name=name;
+           this.size=size;
+           this.pice= price;
+           this.color=color;
+           this.call=function(){
+           	alert('iphone在此')
+           }
+		}
+
+		let iphone5 = new iphone('iphone5','4.5c寸',3600,'black');
+		iphone5.system=6.2;
+		console.log(iphone5);
+		iphone5.call();
+
+		for(let i in iphone5){  //遍历//
+			console.log(i);
+			console.log(`${i}---${iphone5[i]}`);
+		}*/
+
+
+        /*2.json*/
+        /*let acer={
+        	changdi:'台湾',
+        	changpin:'computer',
+        	color:'black',
+        	size:function(){
+        		alert('14.5寸')
+        	}
+
+        }
+        console.log(acer);
+        acer.size();
+        for(let i in acer){
+        	console.log(i);
+        	console.log(`${i}---${acer[i]}`)
+        }*/
+
+
+        /*3.class*/
+        /*class Student{
+        	constructor(name,class,chinese,math){
+        	   this.name=name;
+               this.class=class;
+               this.chinese=chinese;
+               this.math=math;
+               this.school=`${this.name} 一中`;  
+
+        	}
+        	study(){   //方法写在构造函数外面//
+        		alert('我可以学习')
+        	}
+        }
+        let zheng = new Student;
+        console.log(zheng);
+        zheng.study();*/
+
+        
+     
+        function myArray() {
+
+            for (let i = 0; i < arguments.length; i++) {
+                this[i] = arguments[i]
+            }
+            this.length = arguments.length;
+
+            this.push=function(){  //推//
+             	for(let i=0;i<arguments.length;i++){
+             		this[this.length]=arguments[i];
+             		this.length++;
+             	}
+             }
+
+             this.indexof=function(value){  //第一次出现的位置//
+             	for(let i=0;i<this.length;i++){
+             		if(this[i]==value){
+             			return i
+             		}
+             	}
+             	return -1
+             }
+
+             this.lastIndexof=function(value){
+             	for( let i=this.length;i>=0;i--){
+             		if(this[i]==value){
+             			return i
+             		}
+             	}
+             	return -1
+             }
+
+            this.inclueds=function(value){  //inclueds 包括这个数//
+            	for(let i=0;i<this.length;i++){
+            		if(this[i]==value){
+            			return this[i]
+            		}
+            	}
+            	return '没有这个数'
+            }
+
+            this.reverse=function(){  //reverse 反序//
+            	let b =new myArray(); 
+            	for( let i=this.length-1;i>=0;i--){
+                   b[b.length]=this[i];
+                   b.length++;
+            	}
+              return b
+            }
+
+          this.join=function(str){    //加字符串//
+            let result=''; //空字符串''，中间没有空格//
+            for(let i=0;i<this.length;i++){
+              if(i<this.length-1){
+              result=result+this[i]+str;
+              }
+              else{
+                result=result+this[i]
+              }
+            }
+            return result
+          }
+
+            this.sortup=function(){   //升序//
+            	for(let i=0;i<this.length;i++){
+            		for(let j=i+1;j<this.length;j++){
+            			if(this[j]>this[i]){
+            				let tem= this[i];
+            				this[i]=this[j];
+            				this[j]=tem;
+            			}
+            		}
+            	}
+
+          
+
+          this.map = function (fn) {   //map映射//
+                let d = new myArray();
+                for (let i = 0; i < this.length; i++) {
+                    // if (fn(this[i])) {
+                       d.push(fn(this[i]),i,this)
+                        // d[d.length] = fn(this[i]);
+                        // d.length++;
+                    }
+                }
+                return d
+            }
+
+          this.some=function(fn){   //some//
+            for(let i=0;i<this.length;i++){
+              if(fn(this[i])){
+                return true
+              }
+            }
+            return '错误'
+          }
+
+          this.every=function(fn){   //every//
+            for(let i=0;i<this.length;i++){
+              if(!fn(this[i])){
+                return false
+              }
+            }
+            return true
+          }
+
+          
+          this.delnull=function(){       //去空//
+            let newarr=new myArray();
+            for(let i=0;i<this.length;i++){
+              if(this[i]!=undefined){
+                newarr.push(this[i]);
+              }
+            }
+            return newarr
+          }
+      
+
+        let arr1= new myArray('a','b','c','a');//数组//
+      console.log(arr1);
+
+      arr1.push('m','s');   //增加元素//
+      console.log(arr1);
+
+      arr1.indexof('a');   //indexof 第一次出现的位置//
+      console.log(arr1.indexof('a'));
+ 
+      arr1.lastIndexof('a');
+      console.log(arr1.lastIndexof('a'))  //lastIndexof 最后出现的位置//
+
+      arr1.inclueds(5);  //inclueds 包括这个数//
+      console.log(arr1.inclueds(5));
+
+      arr1.reverse();
+      console.log(arr1.reverse())  //reverse 反序//*/
+
+      arr1.join('+');  //join 中间加字符串//
+      console.log(arr1.join('+'))
+
+      let arr5= new myArray('d','b','c','a'); //升序//
+      arr5.sortup();
+      console.log(arr5);
+         
+      let arr2= new myArray(-1,2,3,4,5); //存在某个值//
+       arr2.some(function(value){
+          return value>0
+       })
+
+      let arr3= new myArray(-1,3,4,5)    //map//
+      let resu=arr3.map(function(value){
+          return value-2;
+       })
+       console.log(resu)
+
+       let s1= arr3.some(function(value){ //some//
+         return value >0
+        })
+       console.log(s1)
+
+       let s2= arr3.every(function(value){ //every//
+         return value >0
+       })
+       console.log(s2);
+
+       let newarr1=new myArray('a',undefined,undefined,'v','j','i','o'); //去空//
+       newarr1.delnull();
+       console.log(newarr1.delnull());
+     </script>
+
+   </body>
+ </html>
+
+      

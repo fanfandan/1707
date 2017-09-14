@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function iphone(name,size,color,price){  //构造函数传参数，更方便操作//
+           this.name =name
+           this.size=size
+           this.color=color
+           this.price=price
+           this.call=function(){
+           	alert('打电话')
+           }
+		}
+
+		let iphone7 =new iphone('iphone7','4.7寸','red','4588yuan');
+
+		let iphone8 =new iphone('iphone8','5.8寸','black','7680yuan');
+
+		console.log(iphone7);
+		iphone7.call();//打电话//
+		console.log(iphone7.call()); //执行里面的打电话，再执行call函数的返回值，现在没有返回值，则为undefined//
+
+		console.log(iphone8);
+		console.log(iphone8.system);  //未定义 iphone8.system=undefined//
+		// iphone8.system(); //undefined+()=报错//
+        
+       
+        iphone8.size;
+        iphone8['size']  //方括号里必须为字符串//
+        iphone8['call']() //方法//
+
+         /*遍历: for in*/
+         for(let i in iphone8){
+         	console.log(i)
+         	console.log(`${i}---${iphone8[i]}`);//[]//
+         }
+         /*json 确定的对象*/
+         let zhangsan={};
+         zhangsan.age=18;
+         zhangsan.name='zhangsan';
+         zhangsan.say=function(){
+         	alert(zhangsan.name)
+         }
+         console.log(zhangsan.constructor) /*访问构造函数*/
+         console.log(zhangsan)
+
+
+        /*什么  值 对象*/
+         let four={
+             'age':18, //,  age:18 ,也可//
+             'sex':'renyao',
+             'couple':'unmaried',
+             name:'four',
+             say:function(){
+             	alert('我是four')
+             }
+         }
+         console.log(four)
+         four.say()
+	</script>
+</body>
+</html>

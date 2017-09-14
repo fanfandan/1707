@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json</title>
+</head>
+<body>
+	<script>
+		/*let five ={
+			size:'5.4寸',
+			price: 54122.2,
+			color: 'red',
+			call:function (){
+			   alert('我是一个电话');
+			}
+		}
+		alert(five.constructor);
+		console.log(five);
+		five.call();*/
+
+		//遍历//
+		/*for(let i in five){
+			console.log(i);
+			console.log(`${i}---${five[i]}`)
+		}*/
+
+  /*class Student{   //类名一般大写//
+  	constructor(name,age){
+  		this.name=name;
+  		this.age=age;
+
+  	}
+  	study(value){ //方法,一般写在constructor外面。不需要function//
+     alert(value)
+  	}
+  }
+
+  let zs=new Student('zhangsan',20);
+  zs.study('我爱学习');
+  console.log(zs);*/
+
+  
+   /*promot*/
+  /* let liu =new person('liu','man',18);
+   console.log(liu[1]) //属性也可以为数字//
+   liu.speech('演讲');
+   console.log(liu)
+
+  function person(name,sex,age){
+  	this[1]='a'
+  	this.name=name;
+  	this.sex=sex;
+  	this.age=age;
+  	this.brain=`${this.name}脑子`;
+  	this.hello=function(value){  //传参//
+  		alert(value);
+  	}
+  	/*this.say=function(){
+  		alert(this.brain);  //方法可以调用属性，方法可以调用方法//
+  	}*/
+  	/*this.speech=function(value){
+  		this.hello(value);
+  	}
+  }*/
+
+  /*myArry*/
+ function array1(){
+    for(i=0;i<arguments.length;i++){
+    	 this[i]=arguments[i]
+    }
+    this.length=arguments.length;
+
+    this.push=function(){
+       for(let i=0;i<arguments.length;i++){
+       	this[this.length]=arguments[i];
+        this.length++;
+       }
+    }//里面//
+
+    /*this.indexOf=function(value){
+   for(let i;i<this.length;i++){
+   	if(this[i]==value){
+   		return i
+   	}
+   }
+   return -1
+}*/
+/*this.some=function(fn){
+	for(let i=0;i<this.length;i++){
+		if(fn(this[i])){
+			return true;
+		}
+	}
+	return false
+}*/
+ }
+ let arr=new array1('a','b','c','d','e');
+ arr.push('y','m')
+ console.log(arr);
+
+// let index =arr.indexOf('c');
+// console.log(index);
+
+// arr.some(function(value){
+//    return typeof value == 'number'
+// })
+
+    /*let arr=new Array('a','b','c','d')
+    console.log(arr);
+   function myArry(){
+   	for(let i=0;i<arguments.length;i++){
+      this[i]=arguments[i]
+   	}
+   	this.length=arguments.length;
+   }*/
+	</script>
+</body>
+</html>
+<!-- indexof lastIndexof inclueds  reverse join增加 sort排序 some every mao filter -->
+
+      this.join=function(post,num,...rest){
+            	  
+            		   let c=new myArray();
+                    
+            			for(let i=0;i<post;i++){
+            			 c[c.length]=this[i];
+            			 c.length++;
+            		  }
+            		
+            			for(let i=0;i<rest.length;i++){
+            			c[c.length]=rest[i];
+            			c.length++;
+            		 }
+            	
+            			for(let i=post;i<this.length;i++){
+            				c[c.length]=arguments[i];
+            				c.length++;
+            			}
+            	    return c;
+                    }

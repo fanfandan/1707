@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承</title>
+</head>
+<body>
+	<script>
+		function Person(){
+			this.name='zheng';
+			this.age=18;
+			this.sex='man';
+			this.eat=function(){
+				console.log('have a eat');
+			}
+			this.sleep=function(){
+				console.log('have a sleep');
+			}
+		}
+
+		function Student(){
+			this.class='1707';
+			this.number='wuif1707';
+			this.skill=function(){
+				console.log('fullstack');
+			}	
+		}
+
+		let zheng =new Person;
+		console.log(zheng instanceof Person); //instanceof验证对象，是否从某个构造函数中实例出来//
+		Person.prototype=new Student;
+		console.log(zheng);
+
+		delete zheng.name; //删除属性//
+		delete zheng.eat;  //删除方法//
+		// zheng=null;  //删除对象//
+		console.log(zheng);
+		console.log(zheng._proto_==Student.prototype); //对象才有，构造函数的原型对象//
+
+
+
+		//让Student 拥有Person 的属性和方法//
+		Student.prototype =new Person; 
+
+		// Student.prototype.aa={}//会覆盖上面一句代码//
+		Student.prototype.aa=function(){
+			console.log('Student 的prototype的方法');
+		} //构造函数和原型对象可以有一样的方法和属性，优先用构造函数//
+		//自己有的，优先有的，先用自己父类有的//
+		let yue=new Student;
+		yue.skill();
+		yue.aa();
+		console.log(yue);
+	</script>
+</body>
+</html>

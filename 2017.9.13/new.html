@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>string</title>
+</head>
+<body>
+	<script>
+
+	     let b=[];
+	     console.log(b.__proto__);
+		/*object  string boolean number Array Data RegExp*/
+		let str ='a-b-c-d-a-g-g-a-b-c-d';
+		let str1='   abcd  '
+		// console.log(str.length) //字符串的长度,只能获取//
+		// console.log(str.charAt(2))  //返回指定位置的字符//
+		// str.charCodeAt(1) //返回某个位置的ASCII码//
+		// String.fromCharCode(98) //返回ASCII码的字符
+		// console.log(str.indexOf('a'));
+		// console.log(str.includes('a')); //是否有某个字符串//
+		// console.log(str.slice(0,4)) 
+		// console.log(str,slice(2,4))
+		// console.log(str.replace('abc','***'));
+		// str.match('abcd')
+        console.log(str1.trim());
+        // let result=str.split('-',5);
+        // console.log(result);
+        // str.toUpperCase()
+        // str.toLowerCase()
+        // document.write(str.fontcolor('red'))
+         // 循环-存在-替换-更新//
+          let url='https://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.comhttps://www.baidu.com'
+            
+          function fn2(str,value){
+          	 let a=[];
+          	
+          	 for(let i=0;i<str.length;i++){
+          	 	if(str.substr(i,5)==value){
+                   a[a.length]=i
+          	 	}
+          	 }
+          	 return a
+          }
+  
+         fn2(url,'baidu');
+        console.log(fn2(url,'baidu'));
+
+while (str.includes(value)){
+  a[a.length]=str.indexOf(value)
+}
+          /*function fn(str,value){
+          	  let a=[];
+          	    let start ='*'.repeat(value.length);//写外面//
+               while(str.includes(value)){
+               	  // a[a.length]=str.indexOf(value);//先找位置，再替换//
+               	  a.push(str.indexOf(value));
+               	  str= str.replace(value,start);
+
+               }
+               return a;
+          }
+        fn(url,'baidu');
+        console.log(fn(url,'baidu'));*/
+
+        //遍历-截取5'baidu'-位置传到a
+        function fn1(str,value){
+        	let a=[];
+        	for(let i=0;i<str.length;i++){
+        		if(str.substr(i,5)==value){
+
+                a[a.length]=i
+        	  }
+
+        	}
+        	return a;
+        }
+        fn1(url,'baidu');
+        console.log(fn1(url,'baidu'));
+
+
+
+
+		/*function replaceAll(str,value){
+			let start='*'.repeat(value.length)
+
+			/*let start='';
+			for(let i=0;i<value.length;i++){
+				start+='*'
+			}*/
+			/*while(str.includes(value)){   
+				str=str.replace(value,start)
+			}
+			return str
+		}
+		replaceAll(str,'abcd');
+		console.log(replaceAll(str,'abcd'))*/
+	</script>
+</body>
+</html>

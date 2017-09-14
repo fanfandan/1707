@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script >
+	function Person(){  //属性一般放到构造中//
+		this.name='zhangsan';
+		this.sex='sex';
+		this.interst=function(){
+			alert('跑步')
+		}
+	}
+	  //构造函数的原型对象=object=json  放置方法//
+		Person.prototype={
+             sleep:function(){
+             	alert('休息');
+             },
+             hobby:'休息'
+		}
+
+		Person.prototype.eat=function(){  //会覆盖//
+			alert('吃')
+		}
+		/*Person.prototype={
+			aa:function(){
+
+			}
+		}*/
+   let zheng =new Person();
+   let yue= new Person();
+   delete yue.sex;
+   delete yue.interst;
+   yue = null;
+   alert(yue.sex);
+   yue.sleep();
+   yue.eat();
+   alert(zheng.hobby==yue.hobby)
+	</script>
+
+	function 
+</body>
+</html>
