@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1"></div>
+  <div class="box box1"></div>
+	<script>
+	/*兼容 true  getElementsByClassName(className)
+	不兼容 false  all->class*/
+		function getClass(classname,ranger){
+			ranger=ranger?ranger:document;
+           if(document.getElementsByClassName){
+           	 return  document.getElementsByClassName(classname)
+           }
+           else{
+           	var newarr=[]
+          var all=document.getElementsByTagName('*');
+          for(var i=0;i<all.length;i++){
+          	// if(all[i].className==classname){
+          		if(checkClass(all[i].className,classname)){
+          		    newarr.push(all[i])
+          		}
+          	}
+          }
+          return newarr;
+           }
+		
+function checkClass(className,classname){
+	var arr=className.split(' ');
+	for(var i=0;i<all.length;i++){
+       if(arr[i]==classname){
+       	return true;
+       }
+	}
+	return false;
+}
+
+window.onload=function(){
+   var box=getClass('box');
+   for(var i=0;i<box.length;i++){
+   	box[i].innerText='这是一个叫box的div';
+   }
+  console.log(box);
+		}
+	</script>
+	<!-- checkClass(className,classname)
+          			className里面是否包含 classname
+          			className box box1 box2
+          			classname box -->
+</body>
+</html>

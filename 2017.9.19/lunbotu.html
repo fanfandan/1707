@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+//
+//自动轮播//
+	window.onload=function(){
+		let main=$('main')[0];
+
+		let imgBox=$('.imgBox')[0];
+		let imgs=$('li',imgBox);
+
+		let btns=$('.btns')[0];//按钮//
+		let li=$('li',btns);
+		let lefts=$('left,main')[0]
+		
+		let num=0;//记录当前窗口显示第几张//
+		let t;
+		t=setInterval(move,3000);
+		main.onmouseover=function(){
+			clearInterval(t);
+		}
+		main.onmouseout=function(){
+			t=setInterval(move,3000)
+		}
+按钮
+right.onclick=function(){
+	move();//与自动轮播一致//
+}
+
+		function move(){
+			num++;
+			if(num==imgs.length){
+				num=0;
+			}
+			for(let i=0;i<imgs.length;i++){
+				imgs[i].style.display='none'
+				btns[i].style.background='red'
+			}
+			btns[num].style.background='red'
+          imgs[num].style.display='block'
+		}
+
+		function moveL(){
+			num--;
+			if(num<0){
+				num=imgs.length-1;
+			}
+			for(let i=0;i<imgs.length;i++){
+				imgs[i].style.display='none'
+				btns[i].style.background='red'
+			}
+			btns[num].style.background='red'
+          imgs[num].style.display='block'
+		}
+鼠标点击
+		num=i;
+	}
+	</script>
+</body>
+</html>
