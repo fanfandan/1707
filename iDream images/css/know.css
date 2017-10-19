@@ -1,0 +1,320 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+}
+body{
+	/* background: #F5F5F5; */
+}
+a{
+	text-decoration: none;
+	border: none;
+}
+li{
+	list-style: none;
+}
+/* 头部开始 */
+.header{
+	width: 100%;
+	height: 90px;
+	background: black;
+	position: fixed;
+	z-index: 999;
+}
+#header{
+	width: 100%;
+	height: 90px;
+}
+.header .nav{
+	width: 1200px;
+	height: 100%;
+	background: black;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.header .nav .log{
+	width: 143px;
+	height: 100%;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    overflow: hidden;
+    background: url('../img/logo1.png') no-repeat center;
+    background-size: 130% 130%;
+}
+.header .nav .log a{
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+.nav .log a img{
+	width: 100%;
+	height: 100%;
+}
+.header .nav ul{
+	width: 643px;
+	height: 25px;
+	position: absolute;
+	left: 200px;
+	top: 38px;
+	display: flex;
+	justify-content: space-around;
+}
+.header .nav ul li{
+	float: left;
+	
+}
+.header .nav ul li a:hover{
+	border-bottom: 1px solid white;
+}
+.header .nav ul li a{
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+/* 头部结束 */
+/* 轮播开始 */
+.elunbo{
+	width: 100%;
+	height: 347px;
+	position: relative;
+}
+.zhezhao{
+	width: 100%;
+	height: 347px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.lunbo{
+	width: 100%;
+	height: 347px;
+	background: url('../img/lianxi.png') no-repeat center;
+}
+/* 轮播结束 */
+.text{
+	margin-top: 68px;
+	/* width: 200px; */
+	height: 52px;
+}
+.text .h4{
+	color: grey;
+	font-size: 30px;
+	margin-left: 957px;
+}
+.text .h3{
+	margin-left: 11px;
+	margin-top:11px; 
+	color: grey;
+}
+/* 内容开始 */
+.contents{
+	width: 920px;
+	height: auto;
+	margin-top: 172px;
+	margin-left: 255px;
+}
+.contents .top{
+	width: 100%;
+	height: 553px;
+	position: relative;
+}
+.contents .top img{
+	width: 340px;
+	height: 352px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contents .top  .title{
+	width: 343px;
+	height: 420px;
+	position: absolute;
+	left: 443px;
+	top: 0;
+	/* background: pink; */
+}
+.contents .top  .title .p1{
+	margin: 26px auto;
+	width: 230px;
+	height: 30px;
+	font-size: 30px;
+
+}
+.top  .title  .neirong{
+	width: 346px;
+	height: 323px;
+	margin-top: 40px;
+	/* background: lightblue; */
+	
+}
+.top  .title  .neirong .p2{
+	font-size: 14px;
+	line-height: 26px;
+}
+.top .careful{
+	width: 350px;
+	height: 85px;
+	font-size: 14px;
+	line-height: 26px;
+	color: red;
+	position: absolute;
+	top: 420px;
+}
+.contents .center{
+	width: 662px;
+	height: 42px;
+	margin: 85px auto;
+}
+.contents .center .span1{
+	font-size: 20px;
+	color: red;
+}
+/* 注意事项开始 */
+.contents .bottom{
+	width: 100%;
+	height: 553px;
+	position: relative;
+}
+.contents .bottom img{
+	width: 340px;
+	height: 352px;
+	position: absolute;
+	top: 0;
+	left: 443px;
+}
+.contents .bottom  .title{
+	width: 343px;
+	height: 420px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* background: pink; */
+}
+.contents .bottom  .title .p1{
+	margin: 26px auto;
+	width: 230px;
+	height: 30px;
+	font-size: 30px;
+
+}
+.bottom  .title  .neirong{
+	width: 346px;
+	height: 323px;
+	margin-top: 40px;
+	/* background: lightblue; */
+	
+}
+.bottom  .title  .neirong .p2{
+	font-size: 14px;
+	line-height: 26px;
+}
+.bottom .careful{
+	width: 350px;
+	height: 85px;
+	font-size: 14px;
+	line-height: 26px;
+	color: red;
+	position: absolute;
+	top: 420px;
+}
+/* 注意事项结束 */
+/* 女生注意事项开始 */
+.girls{
+	width: 812px;
+	height: 673px;
+	margin-left: 150px;
+	/* background: pink; */
+	position: relative;
+}
+.girls .beijing{
+	width: 672px;
+	height: 492px;
+	background: #E2E2E2;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.girls .beijing .title{
+	width: 221px;
+	height: 54px;
+	background: #F9F9F9;
+	margin-top: -39px;
+	margin-left: 179px;
+	text-align: center;
+	line-height: 54px;
+	font-size: 28px;
+}
+.girls .beijing  .neirong{
+	width: 221px;
+	height: 284px;
+	margin-top: 7px;
+	margin-left: 179px;
+	background: #F9F9F9;
+	padding-top: 15px;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-bottom: 47px;
+	font-size: 14px;
+	box-sizing: border-box;
+	line-height: 22px;
+
+}
+.girls .beijing  .neirong1{
+	width: 221px;
+	height: 108px;
+	margin-top: 7px;
+	margin-left: 179px;
+	background: #F9F9F9;
+	padding-top: 15px;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-bottom: 47px;
+	font-size: 14px;
+	box-sizing: border-box;
+	line-height: 22px;
+}
+/* 女生注意事项结束 */
+/* 左边开始 */ 
+.girls .left{
+	width: 287px;
+	height: 563px;
+	background: white;
+	position: absolute;
+	top: 119px;
+	left: 0;
+}
+.girls .left .img, img{
+	width: 261px;
+	height: 228px;
+}
+.girls .left .img{
+	margin-top: 19px;
+}
+.girls .left .neirong{
+	width: 265px;
+	height: 432px;
+	font-size: 14px;
+	line-height: 22px;
+    margin-top: 33px;
+}
+/* 左边结束 */
+/* 内容结束 */
+/* 底部开始 */
+footer{
+	text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 200px;
+    width: 100%;
+    height: 50px;
+   background: rgba(0, 0, 0, 0.5);
+   
+    line-height: 50px;
+}
+/* 底部结束 */

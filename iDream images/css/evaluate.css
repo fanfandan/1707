@@ -1,0 +1,212 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+}
+body{
+	background: #F5F5F5;
+}
+a{
+	text-decoration: none;
+	border: none;
+}
+li{
+	list-style: none;
+}
+.header{
+	width: 100%;
+	height: 90px;
+	background: black;
+	position: fixed;
+	z-index: 999;
+}
+#header{
+	width: 100%;
+	height: 90px;
+}
+.header .nav{
+	width: 1200px;
+	height: 100%;
+	background: black;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.header .nav .log{
+	width: 143px;
+	height: 100%;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    overflow: hidden;
+    background: url('../img/logo1.png') no-repeat center;
+    background-size: 130% 130%;
+}
+.header .nav .log a{
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+.nav .log a img{
+	width: 100%;
+	height: 100%;
+}
+.header .nav ul{
+	width: 643px;
+	height: 25px;
+	position: absolute;
+	left: 200px;
+	top: 38px;
+	display: flex;
+	justify-content: space-around;
+}
+.header .nav ul li{
+	float: left;
+	
+}
+.header .nav ul li a:hover{
+	border-bottom: 1px solid white;
+}
+.header .nav ul li a{
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+/* 头部结束 */
+/* 轮播开始 */
+.elunbo{
+	width: 100%;
+	height: 347px;
+	position: relative;
+}
+.zhezhao{
+	width: 100%;
+	height: 347px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.lunbo{
+	width: 100%;
+	height: 347px;
+	background: url('../img/lianxi.png') no-repeat center;
+}
+/* 轮播结束 */
+/* 内容开始 */
+.title{
+	margin-top: 100px;
+	position: relative;
+	margin-bottom: 50px;
+}
+.hengxian{
+	width: 100%;
+	height: 2px;
+	background: lightgrey;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.title .box{
+	width: 161px;
+	height: 39px;
+	background: white;
+	text-align: center;
+	line-height: 39px;
+	border: 1px solid black;
+	position:absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -80px;
+}
+.title .box p{
+	font-size: 16px;
+}
+.contents{
+	width: 1200px;
+	height: 390px;
+	margin: 200px auto;
+}
+.contents ul{
+	width: 1200px;
+	height: 390px;
+}
+.contents ul li{
+	width: 284px;
+	float: left;
+	margin-right: 20px;
+	position: relative;
+	cursor: pointer;
+}
+.contents ul li:last-child{
+	margin-right: 0;
+}
+.contents ul li .img1{
+	width: 284px;
+	height: 292px;
+}
+.contents ul li .img2{
+	width: 284px;
+	height: 80px;
+	position: absolute;
+	top: 213px;
+	left: 0;
+	display: none;
+}
+
+.contents ul li span {
+    width: 284px;
+    height: 48px;
+    line-height: 48px;
+    color: #3b2829;
+    background-color: #e6e2e6;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+.sence{
+   width: 1200px;
+   height: 776px;
+   margin: 0 auto;
+   margin-top: -80px;
+}
+.sence ul li{
+	width: 586px;
+	height: 232px;
+	float: left;
+    margin-right: 26px;
+    margin-bottom: 36px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.sence ul li:nth-child(2n){
+    margin-right: 0;
+}
+.sence ul li .img4{
+	width: 370px;
+	height: 74px;
+	position: absolute;
+	top: 150px;
+	right: 0;
+	display: none;
+}
+/* 内容结束 */
+/* 底部开始 */
+footer{
+	text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 200px;
+    width: 100%;
+    height: 50px;
+   background: rgba(0, 0, 0, 0.5);
+   
+    line-height: 50px;
+}
+/* 底部结束 */

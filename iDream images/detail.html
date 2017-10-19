@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/detail.css">
+	<title>详情</title>
+</head>
+<body>
+    <!-- 头部开始 -->
+	<div class="header">
+		<div class="nav">
+			<div class="log">
+			</div>
+			<ul>
+				<li><a href="index.html">首页/HOME</a></li>
+				<li><a href="gallery.html">作品/GALLERY</a> </li>
+				<li><a href="needknow.html">须知/NEWS</a> </li>
+				<li><a href="evaluate.html">场景/SITEINTR</a></li>
+				<li><a href="about.html">关于/ABOUT</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="header"></div>
+	<!-- 轮播开始 -->
+	<div class="elunbo">
+	   <div class="zhezhao"></div>
+	   <div class="lunbo"></div>
+    </div>
+	<!-- 轮播结束 -->
+	<!-- 内容上开始 -->
+	<div class="sencetop">
+		<div class="tupiand">
+		<img src="img/detail.jpg" alt="">
+	    </div>
+		<div class="right">
+			<p>卡洛维亚</p>
+			<div class="hengxian"></div>
+			<h4>PURE AND FRESH AND ROMANTIC,ELEGANT</h4>
+			<h3>BALI ISLAND</h3>
+		</div>
+	</div>
+	<!-- 内容上结束 -->
+	<!-- 图片开始 -->
+	<div class="photos">
+		<ul>
+			<li><a class='ex1' href="img/d1.jpg"><img src="img/d1.jpg" alt=""></a></li>
+			<li><a class='ex1' href="img/d2.jpg"><img src="img/d2.jpg" alt=""></a></li>
+			<li><a class='ex1' href="img/d3.jpg"><img src="img/d3.jpg" alt=""></a></li>
+			<li><a class='ex1' href="img/d5.jpg"><img src="img/d5.jpg" alt=""></a></li>
+			<li><a class='ex1' href="img/d6.jpg"><img src="img/d6.jpg" alt=""></a></li><br>
+			<li><a class='ex2' href="img/d7.jpg"><img src="img/d7.jpg" alt=""></a></li>
+			<li><a class='ex2' href="img/d8.jpg"><img src="img/d8.jpg" alt=""></a></li>
+			<li><a class='ex2' href="img/d9.jpg"><img src="img/d9.jpg" alt=""></a></li>
+			<li><a class='ex2' href="img/d18.jpg"><img src="img/d18.jpg" alt=""></a></li>
+			<li><a class='ex2' href="img/d11.jpg"><img src="img/d11.jpg" alt=""></a></li><br>
+		<!-- 	<li><a  class='ex3' href=""><img src="img/d12.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d13.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d14.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d15.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d16.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d17.jpg" alt=""></a></li>
+			<li><a  class='ex3' href=""><img src="img/d18.jpg" alt=""></a></li> -->
+		</ul>
+	</div>
+	<!-- 图片结束 -->
+	<!-- 底部开始 -->
+	 <footer>
+		版权所有 © 2007-2017 iDream images觉领鲜主题摄影 蜀ICP备12000079号站长统计 COPYRIGHT © 2007-2017©UP-2017 iDream images VISION WORK lnc.
+	</footer>
+	<!-- 底部结束 -->
+<script type="text/javascript" src="js/jqueryLibrary.min.js"></script>
+<script type="text/javascript" src="js/jquery.imgbox.pack.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".ex1").imgbox();
+	$('.ex2').imgbox();
+	$(".ex3").imgbox({
+		'speedIn'		: 0,
+		'speedOut'		: 0,
+		'alignment'		: 'center',
+		'overlayShow'	: true,
+		'allowMultiple'	: false
+	});
+});
+</script>
+</body>
+</html>

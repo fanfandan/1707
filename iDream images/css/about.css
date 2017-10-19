@@ -1,0 +1,215 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+}
+body{
+	background: #F5F5F5;
+}
+a{
+	text-decoration: none;
+	border: none;
+}
+li{
+	list-style: none;
+}
+.header{
+	width: 100%;
+	height: 90px;
+	background: black;
+	/* background: red; */
+	position: fixed;
+	z-index: 999;
+}
+#header{
+	width: 100%;
+	height: 90px;
+}
+.header .nav{
+	width: 1200px;
+	height: 100%;
+	background: black;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.header .nav .log{
+	width: 143px;
+	height: 100%;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    overflow: hidden;
+    background: url('../img/logo1.png') no-repeat center;
+    background-size: 130% 130%;
+}
+.header .nav .log a{
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+.nav .log a img{
+	width: 100%;
+	height: 100%;
+}
+.header .nav ul{
+	width: 643px;
+	height: 25px;
+	position: absolute;
+	left: 200px;
+	top: 38px;
+	display: flex;
+	justify-content: space-around;
+}
+.header .nav ul li{
+	float: left;
+	
+}
+.header .nav ul li a:hover{
+	border-bottom: 1px solid white;
+}
+.header .nav ul li a{
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+/* 头部结束 */
+/* 轮播开始 */
+.elunbo{
+	width: 100%;
+	height: 347px;
+	position: relative;
+}
+.zhezhao{
+	width: 100%;
+	height: 347px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.lunbo{
+	width: 100%;
+	height: 347px;
+	background: url('../img/lianxi.png') no-repeat center;
+}
+/* 轮播结束 */
+.text{
+	margin-top: 68px;
+	/* width: 200px; */
+	height: 52px;
+}
+.text .h4{
+	color: grey;
+	font-size: 30px;
+	margin-left: 957px;
+}
+.text .h3{
+	margin-left: 11px;
+	margin-top:11px; 
+	color: grey;
+}
+/* 内容开始 */
+.connect{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.connect .leftbox{
+	width: 503px;
+	height: 429px;
+	margin-bottom: 50px;
+	position: absolute;
+	left: 70px;
+	top: 0;
+}
+.connect .leftbox .top{
+	width: 503px;
+	height: 188px;
+	margin-bottom: 50px;
+}
+.leftbox .top p{
+	color: #939399;
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+.leftbox .top .bi{
+    display: block;
+    width: 10%;
+    height: 2px;
+    background: #939399;
+    opacity: .8;
+    margin-bottom: 10px;
+}
+.leftbox .top .tel{
+	width: 503px;
+	height: 30px;
+	/* background: pink; */
+	margin-bottom: 10px;
+	position: relative;
+}
+.leftbox .top .tel h3{
+	position: absolute;
+	color: grey;
+	left: 40px;
+	top: 0;
+}
+.leftbox .top .ti{
+    display: block;
+    width: 30%;
+    height: 2px;
+    background: #939399;
+    opacity: .8;
+    margin-bottom: 10px;
+}
+.leftbox .top .qq{
+	width: 503px;
+	height: 30px;
+	/* background: pink; */
+	margin-bottom: 10px;
+}
+.leftbox .top .qq a{
+	width: 30px;
+	height: 50px;
+	margin-bottom: 6px;
+	color: #999;
+    font-size: 12px;
+    margin-right: 8px; 
+}
+.leftbox .top .qq a img{
+	width: 30px;
+	height: 30px;
+}
+/* 左边结束 */
+/* 右边开始 */
+.connect  .rightbox{
+	width: 362px;
+	height: 424px;
+	float: right;
+    padding-bottom: 50px;
+    position: absolute;
+    right: 70px;
+    top: 0;
+}
+.connect  .rightbox img{
+	width: 100%;
+	height: 100%;
+}
+/* 右边结束 */
+
+/* 内容结束 */
+/* 底部开始 */
+footer{
+	text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 600px;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 50px;
+}
+/* 底部结束 */

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拍摄场景</title>
+	<link rel="stylesheet" href="css/evaluate.css">
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<div class="log">
+				<!-- <a href=""><img src="" alt=""></a> -->
+			</div>
+			<ul>
+				<li><a href="index.html">首页/HOME</a></li>
+				<li><a href="gallery.html">作品/GALLERY</a> </li>
+				<li><a href="needknow.html">须知/NEWS</a> </li>
+				<li><a href="evaluate.html">场景/SITEINTR</a></li>
+				<li><a href="about.html">关于/ABOUT</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="header"></div>
+	<!-- 轮播开始 -->
+	<div class="elunbo">
+	   <div class="zhezhao"></div>
+	   <div class="lunbo"></div>
+    </div>
+	<!-- 轮播结束 -->
+	<!-- 内容开始 -->
+	 <div class="title">
+	 	<div class="hengxian"></div>
+	 	 <div class="box">
+	 	 	<p>热门拍摄场景</p>
+	 	 </div>
+	 </div>
+	 <div class="contents">
+	 	<ul class="shang">
+	 		<li>
+	 			<img src="img/cj1.jpg" alt="" class='img1'>
+	 			<img src="img/scene_list_li.png" alt="" class='img2'>
+	 			<span>卡洛维亚</span>
+	 		</li>
+	 		<li>
+	 			<img src="img/cj2.jpg" alt="" class='img1'>
+	 			<img src="img/scene_list_li.png" alt="" class='img2'>
+	 			<span>马场</span>
+	 		</li>
+	 		<li>
+	 			<img src="img/cj3.jpg" alt="" class='img1'>
+	 			<img src="img/scene_list_li.png" alt="" class='img2'>
+	 			<span>东湖公园</span>
+	 		</li>
+	 		<li>
+	 			<img src="img/cj5.jpg" alt="" class='img1'>
+	 			<img src="img/scene_list_li.png" alt="" class='img2'>
+	 			<span>杨梅坑</span>
+	 		</li>
+	 	</ul>
+	 </div>
+	 <div class="sence">
+	 	<ul class="sencelist">
+	 		<li>
+	 		 <img src="img/c1.jpg" alt="" class='img3'>
+             <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 		<li><img src="img/c2.jpg" alt="" class='img3'>
+              <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 		<li><img src="img/c3.jpg" alt="" class='img3'>
+               <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 		<li><img src="img/c5.jpg" alt="" class='img3'>
+                 <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 		<li><img src="img/c6.jpg" alt="" class='img3'>
+                 <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 		<li><img src="img/c7.jpg" alt="" class='img3'>
+                  <img src="img/scene_list_li.png" alt="" class='img4'>
+	 		</li>
+	 	</ul>
+	 </div>
+	 <footer>
+		版权所有 © 2007-2017 iDream images觉领鲜主题摄影 蜀ICP备12000079号站长统计 COPYRIGHT © 2007-2017©UP-2017 iDream images VISION WORK lnc.
+	</footer>
+	<!-- 内容结束 -->
+
+	<script src="JS/jquery-3.2.1.js"></script>
+	 <!--<script src='JS/public.js'></script>-->
+
+	<script>
+       $(function () {
+
+           //上面的图片
+		   let shangli=$('.shang>li');
+		   shangli.hover(function () {
+               $('.img2',this).stop(true)
+			   $('.img2',this).slideToggle();
+           });
+		   shangli.on('click',function () {
+			   window.location='detail.html'
+           })
+
+		   //下面的图片
+		   let xiali=$('.sencelist>li')
+           xiali.hover(function () {
+               $('.img4',this).stop()
+               $('.img4',this).show();
+           },function () {
+               $('.img4',this).hide();
+           });
+           xiali.on('click',function () {
+               window.location='detail.html'
+           })
+       })
+	</script>
+</body>
+</html>
